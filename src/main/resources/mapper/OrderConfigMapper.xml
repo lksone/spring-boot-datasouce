@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lks.demo.dao.OrderConfigDao">
+    <resultMap id="BASE_RETURN" type="com.lks.demo.entity.OrderConfig">
+        <result column="id" javaType="INTEGER" property="id"/>
+        <result column="payTimeout" javaType="INTEGER" property="payTimeout"/>
+    </resultMap>
+
+    <select id="getOrderConfig" parameterType="Integer" resultMap="BASE_RETURN">
+        SELECT *
+        FROM order_config
+    </select>
+
+</mapper>
