@@ -1,7 +1,6 @@
 package com.lks.demo.entity;
 
 
-import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
@@ -9,7 +8,7 @@ import lombok.ToString;
 @ToString
 public class Order {
 
-    private String id;
+    private Integer id;
 
     private Long userId;
 

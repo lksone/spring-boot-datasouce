@@ -21,5 +21,8 @@ public class OrderTest {
     @Test
     public void testAddOrder() {
         Order order0_0 = new Order();
+        order0_0.setOrderId(12312L);
+        order0_0.setId(123);
+        orderMapper.addOrder(order0_0);
     }
 }
