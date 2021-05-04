@@ -1,12 +1,8 @@
 package com.lks.demo.entity;
 
-import lombok.*;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@Data
 public class OrderConfig {
 
     private Integer id;

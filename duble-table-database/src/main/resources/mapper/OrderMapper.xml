@@ -7,8 +7,8 @@
         <result property="orderId" column="order_id" jdbcType="INTEGER"/>
         <result property="userName" column="user_name" jdbcType="INTEGER"/>
     </resultMap>
-    <select id="getOrders" parameterType="com.lks.demo.entity.Order"
-            resultType="com.lks.demo.entity.Order">
+
+    <select id="getOrders" resultMap="BaseMap">
         select
         t.id ,
         t.user_id ,
@@ -20,17 +20,17 @@
 
     <insert id="addOrder">
         INSERT INTO
-            t_order
+        t_order
         (
-            user_id,
-            user_name,
-            order_id
+        user_id,
+        user_name,
+        order_id
         )
         VALUES
         (
-            #{req.userId},
-            #{req.userName},
-            #{req.orderId}
+        #{req.userId},
+        #{req.userName},
+        #{req.orderId}
         )
     </insert>
 

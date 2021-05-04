@@ -19,7 +19,7 @@ public interface OrderDao extends BaseMapper<Order> {
      * @param order
      * @return
      */
-    List<Order> getOrders(Order order);
+    List<Order> getOrders(@Param("req") Order order);
 
     /**
      * 插入订单信息
