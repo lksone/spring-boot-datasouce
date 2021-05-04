@@ -1,6 +1,7 @@
 package com.lks.demo.mapper;
 
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.lks.demo.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -8,7 +9,7 @@ import java.util.List;
 
 
 @Mapper
-public interface OrderDao {
+public interface OrderDao extends BaseMapper<Order> {
 
 
     /**
