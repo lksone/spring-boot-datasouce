@@ -2,15 +2,14 @@ package com.lks.demo.mapper;
 
 
 import com.lks.demo.entity.Order;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import tk.mybatis.mapper.common.Mapper;
+import org.apache.ibatis.annotations.Mapper;
+import tk.mybatis.mapper.common.BaseMapper;
 
 import java.util.List;
 
 
-@Repository
-public interface OrderDao extends JpaRepository<Order, Integer>{
+@Mapper
+public interface OrderDao extends BaseMapper<Order> {
 
 
     /**
