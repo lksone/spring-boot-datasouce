@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lks.demo.mapper.OrderDao">
+    <resultMap id="BaseMap" type="com.lks.demo.entity.Order">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="orderId" column="order_id" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="INTEGER"/>
+    </resultMap>
+    <select id="getOrders" parameterType="com.lks.demo.entity.Order"
+            resultType="com.lks.demo.entity.Order">
+        select
+        t.id ,
+        t.user_id ,
+        t.order_id ,
+        t.user_name
+        from t_order t
+        where t.user_id=#{userId}
+    </select>
+
+    <insert id="addOrder">
+        INSERT INTO
+            t_order
+        (
+            user_id,
+            user_name,
+            order_id
+        )
+        VALUES
+        (
+            #{req.userId},
+            #{req.userName},
+            #{req.orderId}
+        )
+    </insert>
+
+</mapper>
