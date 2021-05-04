@@ -20,13 +20,19 @@ public class OrderTest {
     @Test
     public void testAddOrder() {
 
-        for (int i = 0; i < 100; i++) {
+        Order order0_0 = new Order();
+        order0_0.setOrderId(1000L);
+        order0_0.setId(1000);
+        order0_0.setUserId(1000L);
+        order0_0.setUserName("lks" + 10000);
+        orderMapper.addOrder(order0_0);
+        /*for (int i = 0; i < 100; i++) {
             Order order0_0 = new Order();
             order0_0.setOrderId((long) i);
             order0_0.setId(i);
             order0_0.setUserId((long) i);
             order0_0.setUserName("lks" + i);
             orderMapper.addOrder(order0_0);
-        }
+        }*/
     }
 }
