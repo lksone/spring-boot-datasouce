@@ -18,11 +18,19 @@
         where t.user_id=#{userId}
     </select>
 
-    <insert id="addOrder" parameterType="com.lks.demo.entity.Order" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO t_order (
-        user_id,user_name,order_id
-        ) VALUES (
-        #{userId},#{userName},#{orderId}
+    <insert id="addOrder">
+        INSERT INTO
+            t_order
+        (
+            user_id,
+            user_name,
+            order_id
+        )
+        VALUES
+        (
+            #{req.userId},
+            #{req.userName},
+            #{req.orderId}
         )
     </insert>
 

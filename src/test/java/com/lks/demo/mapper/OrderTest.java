@@ -19,9 +19,14 @@ public class OrderTest {
 
     @Test
     public void testAddOrder() {
-        Order order0_0 = new Order();
-        order0_0.setOrderId(12312L);
-        order0_0.setId(123);
-        orderMapper.addOrder(order0_0);
+
+        for (int i = 0; i < 100; i++) {
+            Order order0_0 = new Order();
+            order0_0.setOrderId((long) i);
+            order0_0.setId(i);
+            order0_0.setUserId((long) i);
+            order0_0.setUserName("lks" + i);
+            orderMapper.addOrder(order0_0);
+        }
     }
 }
