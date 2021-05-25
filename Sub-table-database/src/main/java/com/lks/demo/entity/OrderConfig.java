@@ -2,6 +2,9 @@ package com.lks.demo.entity;
 
 import lombok.Data;
 
+/**
+ * @author lks
+ */
 @Data
 public class OrderConfig {
 
